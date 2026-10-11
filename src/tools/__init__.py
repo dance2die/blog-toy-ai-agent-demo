@@ -34,4 +34,8 @@ ALLOWED_TOOLS = {
     "save_note": save_note,
     "search_notes": search_notes,
 }
+# Maximum model responses for one user message, including tool requests.
+# Multiple tool calls in one response count as one turn.
+# Tool errors still consume the turn that requested them.
+# If the final response requests tools, those tools are not executed.
 MAX_MODEL_TURNS = 10
